@@ -1,4 +1,4 @@
-package com.quantumflux.identity.domain
+package com.quantumflux.identity.entity
 
 import jakarta.persistence.*
 import java.time.Instant
