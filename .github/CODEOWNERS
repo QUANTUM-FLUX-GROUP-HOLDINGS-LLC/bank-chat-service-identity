@@ -1,0 +1,23 @@
+# CODEOWNERS - Backend Core Services
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Equipo de Backend Core (required)
+* @your-github-username
+
+# Kotlin Services
+/src/main/kotlin/ @your-github-username
+
+# Tests
+/src/test/ @your-github-username
+
+# Database Migrations
+/flyway/ @your-github-username
+/migrations/ @your-github-username
+
+# ML Models
+/ml/ @your-github-username
+*.py @your-github-username
+
+# Configuration
+application*.yml @your-github-username
+*.properties @your-github-username
