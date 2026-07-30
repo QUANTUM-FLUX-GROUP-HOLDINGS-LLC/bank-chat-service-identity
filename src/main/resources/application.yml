@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: identity-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/identity_db
+    username: ${DB_USER:identity}
+    password: ${DB_PASS:identity_dev}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.jdbc.time_zone: UTC
+    open-in-view: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:dev-secret-key-change-in-production}
+    expiration: 900
+    refresh-expiration: 604800
+  argon2:
+    memory: 65536
+    iterations: 3
+    parallelism: 4
+
+vault:
+  address: ${VAULT_ADDR:http://localhost:8200}
+  token: ${VAULT_TOKEN:dev-token}
+  path: secret/data/identity
+
+kafka:
+  bootstrap-servers: ${KAFKA_SERVERS:localhost:9092}
+  topics:
+    user-registered: user.registered
+    user-verified: user.verified
+    user-logged-in: user.logged-in
+
+management:
+  endpoints:
+    web.exposure.include: health,metrics,prometheus
+  endpoint:
+    health.show-details: always
