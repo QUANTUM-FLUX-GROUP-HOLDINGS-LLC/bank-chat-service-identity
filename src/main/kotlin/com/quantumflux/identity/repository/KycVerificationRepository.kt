@@ -1,7 +1,7 @@
-package com.quantumflux.identity.infra
+package com.quantumflux.identity.repository
 
-import com.quantumflux.identity.domain.KycVerificationEntity
-import com.quantumflux.identity.domain.VerificationStatus
+import com.quantumflux.identity.entity.KycVerificationEntity
+import com.quantumflux.identity.entity.VerificationStatus
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 

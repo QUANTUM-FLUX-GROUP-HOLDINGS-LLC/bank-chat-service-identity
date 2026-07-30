@@ -1,7 +1,7 @@
-package com.quantumflux.identity.infra
+package com.quantumflux.identity.repository
 
-import com.quantumflux.identity.domain.UserEntity
-import com.quantumflux.identity.domain.UserStatus
+import com.quantumflux.identity.entity.UserEntity
+import com.quantumflux.identity.entity.UserStatus
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 

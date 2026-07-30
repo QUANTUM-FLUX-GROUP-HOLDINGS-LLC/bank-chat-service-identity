@@ -1,6 +1,6 @@
-package com.quantumflux.identity.infra
+package com.quantumflux.identity.repository
 
-import com.quantumflux.identity.domain.MfaDeviceEntity
+import com.quantumflux.identity.entity.MfaDeviceEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 

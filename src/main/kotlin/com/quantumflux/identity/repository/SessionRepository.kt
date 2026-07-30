@@ -1,6 +1,6 @@
-package com.quantumflux.identity.infra
+package com.quantumflux.identity.repository
 
-import com.quantumflux.identity.domain.SessionEntity
+import com.quantumflux.identity.entity.SessionEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 
